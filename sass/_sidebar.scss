@@ -1,0 +1,42 @@
+.sidebar {
+  background-color: $color-primary;
+  grid-row: 1/-1;
+  padding-top: 3rem;
+  display: flex;
+  justify-content: center;
+  @media only screen and(max-width:$bp-large) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top: 0%;
+  }
+}
+.sidebar__btn {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  width: 4rem;
+  height: 0.3rem;
+  display: block;
+  &::before,
+  &:after {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background-color: #fff;
+  }
+  &::before {
+    transform: translateY(-1.4rem);
+  }
+  &::after {
+    transform: translateY(1rem);
+  }
+  @media only screen and(max-width:$bp-large) {
+    margin-top: 0%;
+    margin-right: 4rem;
+    padding-top: 0%;
+  }
+}
